@@ -1,0 +1,186 @@
+:root{
+    --default-bg:#202024;
+    --default-color: gray;
+    --default-color-link:#947EFA;
+    --default-bg-header:#4c446f;
+    --default-color-header: #c0c0c0;
+    --default-color-btn: #f5f5f5;
+    --default-bg-nav: #2d2b32;
+    --default-color-footer: DimGray;
+    --default-bg-subject:#1a1a1e;
+
+    //modal
+    --default-modal-bg-header:#2d2b32;
+    --default-modal-text-header:#b6b6b6;
+    --default-modal-nav-color: #808080;
+    --default-modal-bg-body:#202024;
+    --default-modal-bg-footer:#202024;
+
+    //form
+    --default-form-label:#c0c0c0;
+    --default-form-bg:#2d2b32;
+    --default-form-bg-color:gray;
+    --default-form-bg-border:#202024;
+}
+
+body{
+    font-family: 'Roboto', 'Tajawal', sans-serif;
+    background:var(--default-bg) !important;
+    color:var(--default-color);
+}
+
+table{
+    color:var(--default-color) !important;
+    font-size:14px !important;
+    border-color: #fff1 !important;
+}
+
+.wave{
+    box-shadow:unset !important;
+}
+
+a{
+    color:var(--default-color-link);
+    text-decoration: none;
+}
+
+header{
+    background-color:var(--default-bg-header) !important;
+    .navbar-brand{
+        font-size:18px;
+        color:var(--default-color-header);
+    }
+}
+
+.header-nav{
+    background-color:var(--default-bg-nav);
+    a{
+        color:var(--default-color) !important;
+        font-size:14px;
+        &:hover{
+            background-color:var(--default-bg-header);
+            color:var(--default-color-header) !important;
+        }
+    }
+}
+
+footer{
+    p{
+        font-size:11px !important;
+        color:var(--default-color-footer) !important;
+        a{
+            color:var(--default-color-link) !important;
+        }
+    }
+}
+
+.nav-link[disabled] {
+    color: #5b5b5b;
+    cursor: no-drop;
+}
+
+.btn-default{
+    background-color:var(--default-color-link) !important;
+    color:var(--default-color-btn) !important;
+}
+
+.btn-outline-default{
+    background-color:transparent !important;
+    color:var(--default-color-link) !important;
+    border:1px solid var(--default-color-link) !important;
+    &:hover{
+        background-color:var(--default-color-link) !important;
+        color:var(--default-color-btn) !important;
+    }
+}
+
+.btn-max{
+  position:absolute;
+  bottom:0;
+  transform:translate(0,-22%);
+  font-size:11px;
+}
+
+.list-menu {
+    >button{
+        font-size:14px;
+        margin-bottom:0.5rem;
+        background-color:transparent !important;
+        color:var(--default-color) !important;
+        border:1px dashed var(--default-color) !important;
+        border-radius:15px;
+        &.active{
+            background-color:var(--default-color-link) !important;
+            color:var(--default-color-btn) !important;
+            border:1px dashed var(--default-color-link) !important;
+        }
+    }
+}
+
+.subject{
+    font-size:13px;
+    background-color:var(--default-bg-subject) !important;
+    blockquote {
+        background: var(--default-bg);
+        border-left: 5px solid var(--default-color-link) !important;
+        border: 1px solid var(--default-bg-nav);
+     }
+}
+
+.pagination{
+    .paginate_button{
+        font-size: 13px;
+        margin: 0 2px;
+
+        a{
+            background-color:var(--default-bg-nav);
+            border-radius: 5px !important;
+            color: var(--default-color-link);
+            border: 0 !important;
+        }
+        
+        &.disabled>a, &.active>a{
+            color:#666 !important;
+            background-color:var(--default-bg-nav);
+            cursor: no-drop;
+        }
+    }
+}
+
+.modal {
+    .modal-close{
+        color:var(--default-modal-text);
+    }
+
+    .modal-content{
+        background-color:transparent !important;
+    }
+    .modal-header{
+        background-color:var(--default-modal-bg-header) !important;
+        color:var(--default-modal-text-header);
+        .nav-link{
+            color:var(--default-modal-nav-color) !important;
+            &.active{
+                background-color:var(--default-color-link) !important;
+                color:var(--default-color-btn) !important;
+            }
+        }
+    }
+    .modal-body{
+        background-color: var(--default-modal-bg-body);
+    }
+    .modal-footer{
+        background-color:var(--default-modal-bg-footer);
+    }
+}
+
+.form-control,  .form-control:focus,
+.form-select,   .form-select:focus {
+    background-color:var(--default-form-bg) !important;
+    color:var(--default-form-bg-color) !important;
+    border-color:var(--default-form-bg-border) !important;
+    &:disabled {
+        cursor: no-drop !important;
+        opacity: 0.5 !important;
+    }
+}
